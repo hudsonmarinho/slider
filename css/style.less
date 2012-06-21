@@ -1,0 +1,152 @@
+//============================ Libraries
+
+@import "libs/css3";
+@import "libs/noGrid";
+@import "libs/grid";
+@import "libs/reset";
+
+
+//============================ vars
+
+
+
+//============================ functions
+
+
+
+//============================ html
+
+html{ background: url(../img/bg-html.png) top center; }
+body{ background: url(../img/bg-body.png) no-repeat top center; font-family: 'PT Sans', sans-serif; font-size: 14px; color: #999; font-weight: normal; }
+
+html, body{ height: 100%; }
+
+a{}
+p{}
+ul,li,ol{ list-style: none; margin: 0; padding: 0; }
+
+
+
+//============================ headers
+
+
+
+//============================ forms
+
+
+
+//============================ index
+
+#shutter{
+	width: 100%;
+	height: 580px;
+	position: relative;
+	overflow: hidden;
+	
+	nav{
+		width: 50px;
+		height: 30px;
+		position: absolute;
+		top: 540px;
+		left: 50%;
+		margin: 0 -105px;
+		z-index: 100;
+		
+		a{
+			width: 20px;
+			height: 30px;
+			display: block;
+			
+			background-repeat: no-repeat;
+			background-position: 0 0;
+			text-indent: -30000px;
+			
+			&:hover{ background-position: 0 -30px; }
+		}
+		
+		a#prev{ background-image: url(../img/nav-prev.png); float: left; }
+		a#next{ background-image: url(../img/nav-next.png); float: right; }
+	}
+	
+	#slide-pieces{
+		width: 100%;
+		height: 580px;
+		overflow: hidden;
+		position: relative;
+		
+		li.shutter-current{ z-index: 10; }
+		
+		li{
+			width: 100%;
+			height: 580px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			overflow: hidden;
+			z-index: 9;
+			
+			figure{
+				width: 1652px;
+				height: 580px;
+				top: 0;
+				left: 50%;
+				margin: 0 -720px;
+				position: absolute;
+				overflow: hidden;
+				background-repeat: no-repeat;
+				background-position: top center;
+				
+				div.piece{
+					width: 235px;
+					height: 580px;
+					margin-left: 1px;
+					float: left;
+					position: relative;
+				}
+				
+				img{ display: none; }
+			}
+			
+			article{
+				width: 250px;
+				height: 210px;
+				padding: 20px 134px 0 126px;
+				display: block;
+				background: url(../img/bg-nav-slide.png) no-repeat 0 0;
+				top: 350px;
+				left: 50%;
+				margin: 0 -150px;
+				position: absolute;
+				z-index: 99;
+				
+				h3{
+					width: 250px;
+					margin-bottom: 20px;
+					display: block;
+					font-family: 'Bebas Neue Regular', Arial, Helvetica, sans-serif;
+					font-size: 36px;
+					font-weight: normal;
+					color: #000;
+				}
+				
+				div{
+					width: 250px;
+					height: 90px;
+					line-height: 15px;
+					position: relative;
+					display: block;
+					font-size: 13px;
+					color: #fff;
+				}
+				
+				a{
+					font-family: 'Bebas Neue Regular', Arial, Helvetica, sans-serif;
+					font-size: 16px;
+					font-weight: normal;
+					text-decoration: none;
+					color: #fff;
+				}
+			}
+		}
+	}
+}

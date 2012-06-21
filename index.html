@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		
+		<meta charset="utf-8">
+		
+		<title>Domotech</title>
+		
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		
+		<meta name="viewport" content="minimum-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no">
+		<meta name="format-detection" content="telephone=no" />
+		
+		<meta name="author" content="Hudson Marinho">
+		
+		<!-- less -->
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		
+		<script src="js/analytics.js"></script>
+		
+		<script src="js/jquery-1.6.4.min.js"></script>
+		<script src="js/modernizr.custom.76447.js"></script>
+		<script src="js/jquery.background-position.js"></script>
+		<script src="js/jquery.shutter.js"></script>
+		
+		<script type="text/javascript">
+			$(function(){
+				var $shutter = $('#shutter > ul li').shutter();
+				
+				$('#prev').click(function(){ $shutter.shutter('prev') });
+				$('#next').click(function(){ $shutter.shutter('next') });
+			});
+		</script>
+		
+	</head>
+	
+	<body>
+		
+		<section id="shutter">
+			<ul id="slide-pieces">
+				<li>
+					<figure><img src="img/slide/img-1.png" alt="Casa Inteligente"></figure>
+					
+					<article class="slide-info">
+						<h3>Casa Inteligente</h3>
+						<div>
+							A <strong>Domotech</strong> possui a melhor<br> 
+							opção em automação residencial,<br>
+							permitindo a comunicação entre estes dispositivos e controlá-los através<br>
+							de um gerenciador central.
+						</div>
+						<a href="#">Saiba Mais</a>
+					</article>
+				</li>
+				
+				<li>
+					<figure><img src="img/slide/img-2.png" alt="Domotech"></figure>
+					
+					<article class="slide-info">
+						<h3>Domotech</h3>
+						<div>
+							Soluções inteligentes para Projetos<br>
+							de instalações elétricas, Segurança eletrônica patrimonial, Automação residencial, Manutenção preditiva<br>
+							dentre outros.
+						</div>
+						<a href="#">Saiba Mais</a>
+					</article>
+				</li>
+			</ul>
+			
+			<nav id="nav">
+				<a id="prev" href="javascript:;">Prev</a>
+				<a id="next" href="javascript:;">Next</a>
+			</nav>
+		</section>
+		
+	</body>
+</html>
